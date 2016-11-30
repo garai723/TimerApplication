@@ -14,13 +14,30 @@ import org.json.JSONObject
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 
-class AsyncJsonLoader : AsyncTask<String, Int, JSONObject>() {
+
+
+open class AsyncJsonLoader : AsyncTask<String, Int, JSONObject>() {
+
+    interface AsyncTaskCallback {
+        fun postExecute(result: JSONObject)
+    }
+
+    private val TAG = AsyncJsonLoader::class.java!!.getSimpleName()
+    private var callback: AsyncTaskCallback? = null
+
+    //コンストラクタ
+    fun AsyncJsonLoader(_callback: AsyncTaskCallback) {
+        this.callback = _callback
+    }
+
 
     override fun onPostExecute(_result: JSONObject) {
         super.onPostExecute(_result)
 
         //APIリクエスト確認用
         Log.d("API", _result.toString())
+
+        callback!!.postExecute(_result)
     }
 
 
@@ -47,4 +64,8 @@ class AsyncJsonLoader : AsyncTask<String, Int, JSONObject>() {
 
         return null
     }
+
+
+
+
 }

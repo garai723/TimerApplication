@@ -8,6 +8,73 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.garai.timerapplication.TimerActivity">
+    tools:context="com.example.garai.timerapplication.TimerActivity"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/button_start"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/text_timer"
+        android:layout_alignStart="@+id/text_timer"
+        android:layout_alignRight="@+id/text_timer"
+        android:layout_alignEnd="@+id/text_timer"
+        android:background="@drawable/button" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_timer"
+        android:gravity="center"
+        android:textSize="52sp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_alignStart="@+id/radioGroup1"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_alignEnd="@+id/radioGroup1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="59dp"
+        android:checkedButton="@+id/leftBtn"
+        android:orientation="horizontal"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false">
+
+        <RadioButton
+            android:id="@+id/leftBtn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/radio_left"
+            android:button="@null"
+            android:gravity="center"
+            android:text="柔らかめ"
+            android:textColor="@drawable/radio_text_color" />
+
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/radio_center"
+            android:button="@null"
+            android:gravity="center"
+            android:text="普通"
+            android:textColor="@drawable/radio_text_color" />
+
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/radio_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="固め"
+            android:textColor="@drawable/radio_text_color" />
+    </RadioGroup>
+
 
 </RelativeLayout>

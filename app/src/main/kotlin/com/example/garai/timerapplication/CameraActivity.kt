@@ -169,7 +169,7 @@ class CameraActivity : Activity(), SurfaceHolder.Callback, AutoFocusCallback, Pr
                 startActivity(intent)
 
             } catch (re: ReaderException) {
-                Toast.makeText(applicationContext, "read error: " + re.message,
+                Toast.makeText(applicationContext, "読み取りに失敗しました",
                         Toast.LENGTH_LONG).show()
             }
 
