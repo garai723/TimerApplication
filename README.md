@@ -25,11 +25,7 @@
 | API名 | PATH | メソッド | 説明 |　戻り値 |
 | --- | --- | --- | --- | --- |
 | バージョン取得 | Version | GET | 起動時にバージョンの取得を行うAPI |　{"status": 200 ,"error":"", "ver":"1.0.0"} |
-| マスタデータ取得 | MasterSync | GET | 起動時にサーバから最新のマスタを取得するAPI |　{"status": 200 ,
-"error":"",
-"jan_code":"11111111",
-"name":"カップヌードル",
-"wait_time":180} |
+| マスタデータ取得 | MasterSync | GET | 起動時にサーバから最新のマスタを取得するAPI |　{"status": 200 ,"error":"","jan_code":"11111111","name":"カップヌードル","wait_time":180} |
 | 茹で時間登録・照会 | BoilTime | GET | 茹で時間を照会するAPI |　{"status": 200 ,"error":"", "wait_time":120} |
 | 茹で時間登録・照会 | BoilTime | POST | 茹で時間を登録するAPI |　{"status": 201 ,"error":""} |
 | ログデータ登録 | LogPost | POST | 利用ログを登録するAPI |　{"status": 201 ,"error":""} |
